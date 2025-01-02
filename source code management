@@ -1,0 +1,149 @@
+registration.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .registration-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"],
+        .registration-form button {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 10%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .registration-form button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Register</h2>
+        <form action="submit_registration.php" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+Git Basic Commands and Their Functions:
+
+1. Check Git Version:
+   git --version
+   - Shows the installed Git version.
+
+2. Initialize a New Git Repository:
+   git init
+   - Initializes a new Git repository in the current folder.
+
+3. Clone a Repository:
+   git clone <repository-url>
+   - Clones an existing repository to your local machine.
+
+4. Check the Status:
+   git status
+   - Displays the status of the files in your repository (modified, added, etc.).
+
+5. Track New Files:
+   git add <file-name>
+   - Adds a specific file to the staging area.
+
+   git add .
+   - Adds all modified files in the repository to the staging area.
+
+6. Commit Changes:
+   git commit -m "Your commit message"
+   git commit -m "first image"
+   - Commits the staged changes with a descriptive message.
+
+7. View Commit History:
+   git log
+   - Displays the commit history with details like commit ID, author, and message.
+
+8. Create a New Branch:
+   git checkout -b <branch-name>
+   - Creates and switches to a new branch.
+
+9. Switch Branches:
+   git checkout <branch-name>
+   - Switches to an existing branch.
+
+10. Merge Branches:
+    git merge <branch-name>
+    - Merges changes from the specified branch into the current branch.
+
+11. Push Changes to Remote:
+    git push origin <branch-name>
+    - Pushes local commits to the specified branch on the remote repository.
+
+12. Pull Changes from Remote:
+    git pull origin <branch-name>
+    - Fetches and merges changes from the remote repository to your local branch.
+
+13. View Remote Repositories:
+    git remote -v
+    - Displays the remote repositories linked to the local repository.
+
+14. Delete a Branch Locally:
+    git branch -d <branch-name>
+    - Deletes a local branch.
+
+15. Delete a Remote Branch:
+    git push origin --delete <branch-name>
+    - Deletes a branch from the remote repository.
+
+
+GitHub and Remote Repositories:
+
+1. Create a GitHub Account:
+   - Go to https://github.com/ and sign up for a free account.
+
+2. Create a New Repository on GitHub:
+   - Click the "New" button in GitHub to create a new repository.
+
+3. Push Local Code to GitHub:
+   git remote add origin <repository-url>
+   - Links your local repository to the GitHub repository.
+
+   git push -u origin master
+   - Pushes local commits to the GitHub repository.
+
+
+
