@@ -1,0 +1,53 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test Page</title>
+</head>
+<body>
+    <h1 id="greeting">Hello, World!</h1>
+    <button id="changeText">Change Greeting</button>
+    
+    <script>
+        // JavaScript code to change the text
+        document.getElementById('changeText').addEventListener('click', function() {
+            document.getElementById('greeting').innerText = 'Hello, Selenium!';
+        });
+    </script>
+</body>
+</html>
+
+testlogin.js
+
+const { Builder, By, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+const path = require('path');
+(async function testJavaScript() {
+    let driver = await new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options()).build();
+    try {
+        await driver.get('file://' + path.resolve(__dirname, 'index.html'));
+        let greetingText = await driver.findElement(By.id('greeting')).getText();
+        console.log('Initial greeting: ' + greetingText);
+        let button = await driver.findElement(By.id('changeText'));
+        await button.click();
+        await driver.wait(until.elementTextIs(driver.findElement(By.id('greeting')), 'Hello, Selenium!'), 5000);
+        greetingText = await driver.findElement(By.id('greeting')).getText();
+        console.log('Updated greeting: ' + greetingText);
+        await new Promise(resolve => setTimeout(resolve, 5000));
+    } finally {
+        await driver.quit();
+    }
+})();
+
+commands in cmd
+
+node -v
+npm -v
+cd path to seleniumtest
+npm init -y
+npm install selenium-webdriver
+npm install chrome driver
+node testlogin.js
