@@ -67,7 +67,7 @@ cd ur folder in c(/)
 git init
 git remote add origin git url
 git add .
-git command -m "initial commit with html"
+git commit -m "initial commit with html"
 git push -u origin master
 git push -u origin master
 git push origin master
