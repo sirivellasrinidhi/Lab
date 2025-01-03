@@ -1,0 +1,35 @@
+Dockerfile
+FROM python
+WORKDIR /app
+COPY ./app
+CMD ["python3","app.py"]
+
+app.py
+print("this is my first image")
+
+in terminal
+cd .\python-image\
+cls
+docker build -t myfirstapp .
+docker run myfirstapp
+
+app.py 
+import os
+print("this is my first image:)
+print("Container dir is:", os.getcwd())
+
+in terminal
+docker build -t myfirstapp .
+docker run --name firstpyc myfirstapp
+
+in app.py
+import os
+print("this is my first image:)
+print("Container dir is:", os.getcwd())
+print(os.listdir())
+
+hello.txt- hiiiii
+
+in terminal
+docker build -t listimage .
+docker run --name secondpyc listimage
