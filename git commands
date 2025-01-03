@@ -1,0 +1,8 @@
+git init
+git config --global user.name"sirivellasrinidhi"
+email id
+git clone repository url
+cd repository name
+touch README.md
+4 lines from git, remove 2nd line and 1>
+git push origin main
